@@ -6,13 +6,25 @@ This portfolio represents my passion for software development, web technologies,
 
 ## 🚀 Features
 - Responsive and modern UI design
-- Interactive animations and hover effects
+- Interactive animations particle engine and hover effects
 - About Me section
 - Skills showcase
 - Projects display section
 - Contact section with social links
-- Smooth scrolling navigation
 - Mobile-friendly design
+- Floating antigravity animations
+- Interactive particle background
+- Premium glassmorphism modern UI
+- Smooth scroll reveal effects navigation
+- GitHub & LinkedIn integration
+- Futuristic immersive portfolio experience
+- Advanced cinematic UI
+- ⁠Floating antigravity effects
+⁠- Cursor-reactive animations
+- 3D hover effects
+- ⁠Scroll-triggered transitions
+- Dynamic neon aesthetics
+- ⁠Modern startup-style portfolio interactions
 
 ## 🛠️ Technologies Used
 - HTML5
@@ -21,6 +33,14 @@ This portfolio represents my passion for software development, web technologies,
 
 ## 🎯 Purpose of the Project
 The purpose of this project is to build a professional online presence and showcase my development skills, creativity, and projects in a structured and interactive way.
+
+## Featured Projects:
+
+1)Space Facts
+
+2)AI and Plagiarism:Detection & Ethical Usage
+
+3)AI-Assisted Virtual Training and Learning Environment
 
 ## 👩‍💻 Author
 THOTA SATHWIKA  
