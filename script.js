@@ -4,6 +4,46 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
+    // Cinematic Preloader
+    // ==========================================================================
+    const preloader = document.getElementById('preloader');
+    const loadingBar = document.querySelector('.loading-bar');
+    
+    // Animate loading bar
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress > 100) progress = 100;
+        if (loadingBar) loadingBar.style.width = progress + '%';
+        
+        if (progress === 100) {
+            clearInterval(interval);
+        }
+    }, 100);
+
+    window.addEventListener('load', () => {
+        clearInterval(interval);
+        if (loadingBar) loadingBar.style.width = '100%';
+        
+        setTimeout(() => {
+            if (preloader) {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+            }
+            // Trigger initial GSAP animations after preloader fades out
+            if (typeof gsap !== 'undefined') {
+                const tl = gsap.timeline();
+                tl.from('.glass-nav', { y: -100, opacity: 0, duration: 1, ease: 'power3.out' })
+                  .from('.hero-greeting', { y: 20, opacity: 0, duration: 0.8 }, '-=0.5')
+                  .from('.hero-title', { y: 20, opacity: 0, duration: 0.8 }, '-=0.6')
+                  .from('.subtitle-container', { y: 20, opacity: 0, duration: 0.8 }, '-=0.6')
+                  .from('.hero-cta a', { y: 20, opacity: 0, duration: 0.8, stagger: 0.2 }, '-=0.6')
+                  .from('.floating-element', { scale: 0, opacity: 0, duration: 1, stagger: 0.2 }, '-=0.5');
+            }
+        }, 500); // Wait half a second at 100% before hiding
+    });
+
+    // ==========================================================================
     // Custom Cursor Logic
     // ==========================================================================
     const cursorDot = document.querySelector('.cursor-dot');
@@ -14,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let mouseX = 0, mouseY = 0;
         let glowX = 0, glowY = 0;
         
+        const floatingElements = document.querySelectorAll('.floating-element');
+
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
@@ -21,6 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Move dot instantly
             cursorDot.style.left = mouseX + 'px';
             cursorDot.style.top = mouseY + 'px';
+
+            // Interactive Parallax for Floating Elements
+            const xOffset = (mouseX / window.innerWidth - 0.5) * 60;
+            const yOffset = (mouseY / window.innerHeight - 0.5) * 60;
+            
+            floatingElements.forEach((el, index) => {
+                const speed = (index + 1) * 0.5;
+                el.style.marginLeft = `${xOffset * speed}px`;
+                el.style.marginTop = `${yOffset * speed}px`;
+            });
         });
 
         // Use requestAnimationFrame for smooth trailing glow
@@ -104,14 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     gsap.registerPlugin(ScrollTrigger);
 
-    // Initial load animation
-    const tl = gsap.timeline();
-    tl.from('.glass-nav', { y: -100, opacity: 0, duration: 1, ease: 'power3.out' })
-      .from('.hero-greeting', { y: 20, opacity: 0, duration: 0.8 }, '-=0.5')
-      .from('.hero-title', { y: 20, opacity: 0, duration: 0.8 }, '-=0.6')
-      .from('.subtitle-container', { y: 20, opacity: 0, duration: 0.8 }, '-=0.6')
-      .from('.hero-cta a', { y: 20, opacity: 0, duration: 0.8, stagger: 0.2 }, '-=0.6')
-      .from('.floating-element', { scale: 0, opacity: 0, duration: 1, stagger: 0.2 }, '-=0.5');
+    // Initial load animation is now handled in the window load event (preloader)
 
     // Scroll Animations
     gsap.utils.toArray('.section-title').forEach(title => {
@@ -193,12 +238,17 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const repos = await response.json();
             
+            const loadingIndicator = document.querySelector('.loading-projects');
+            if (loadingIndicator) loadingIndicator.remove();
+
             if (repos.length === 0) {
-                githubContainer.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">No public repositories found.</p>';
+                const emptyMsg = document.createElement('p');
+                emptyMsg.style.textAlign = 'center';
+                emptyMsg.style.gridColumn = '1/-1';
+                emptyMsg.textContent = 'No additional public repositories found on GitHub.';
+                githubContainer.appendChild(emptyMsg);
                 return;
             }
-
-            githubContainer.innerHTML = ''; // Clear loading
 
             repos.forEach((repo, index) => {
                 // Skip forks if desired, or keep them. We'll keep them for now.
@@ -253,11 +303,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Error fetching GitHub projects:', error);
-            githubContainer.innerHTML = `
-                <div style="grid-column: 1/-1; text-align: center;">
-                    <p>Failed to load projects. Please visit my <a href="https://github.com/${githubUsername}" target="_blank" style="color:var(--primary-neon)">GitHub profile</a> directly.</p>
-                </div>
-            `;
+            const loadingIndicator = document.querySelector('.loading-projects');
+            if (loadingIndicator) loadingIndicator.remove();
+            
+            const errorMsg = document.createElement('div');
+            errorMsg.style.gridColumn = '1/-1';
+            errorMsg.style.textAlign = 'center';
+            errorMsg.innerHTML = `<p style="color: var(--text-muted);">Failed to load additional projects. Please visit my <a href="https://github.com/${githubUsername}" target="_blank" style="color:var(--primary-neon)">GitHub profile</a> directly.</p>`;
+            githubContainer.appendChild(errorMsg);
         }
     }
 
