@@ -1,2 +1,31 @@
-# Personal-Portfolio-Website
-Modern and responsive personal portfolio website built using HTML, CSS, and JavaScript to showcase my skills, projects, and web development journey with interactive UI, animations, and professional design.
+# 🌐 Personal Portfolio Website
+
+A modern and responsive personal portfolio website developed using HTML, CSS, and JavaScript to professionally showcase my skills, projects, and technical journey as a Computer Science Engineering student.
+
+This portfolio represents my passion for software development, web technologies, and continuous learning in the field of AI-driven software development. The website features an interactive and visually appealing user interface with smooth animations, responsive layouts, and modern design principles.
+
+## 🚀 Features
+- Responsive and modern UI design
+- Interactive animations and hover effects
+- About Me section
+- Skills showcase
+- Projects display section
+- Contact section with social links
+- Smooth scrolling navigation
+- Mobile-friendly design
+
+## 🛠️ Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+
+## 🎯 Purpose of the Project
+The purpose of this project is to build a professional online presence and showcase my development skills, creativity, and projects in a structured and interactive way.
+
+## 👩‍💻 Author
+THOTA SATHWIKA  
+3rd Year B.Tech CSE Undergraduate
+
+## 🔗 Connect With Me
+GitHub: https://github.com/ThotaSathwika  
+LinkedIn: https://www.linkedin.com/in/thota-sathwika-9046b22
