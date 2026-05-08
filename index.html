@@ -1,120 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>THOTA SATHWIKA | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thota Sathwika - 3rd Year B.Tech CSE Undergraduate & Aspiring Software Developer.">
+    <title>Thota Sathwika | Portfolio</title>
+    
+    <!-- Google Fonts: Inter for body, Orbitron for futuristic headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
 
-<div class="cursor-glow"></div>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
 
-<header>
-  <nav>
-    <h1 class="logo">THOTA SATHWIKA</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">TS<span class="neon-text">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Hello, I'm</h2>
-      <h1>THOTA SATHWIKA</h1>
-      <h3>CSE Undergraduate | Aspiring Software Developer</h3>
-      <p>
-        Passionate 3rd-year B.Tech Computer Science student focused on building
-        impactful digital solutions using programming, web technologies, and problem-solving skills.
-      </p>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2 class="hero-greeting">Hello, I am</h2>
+                <h1 class="hero-title glitched-text" data-text="THOTA SATHWIKA">THOTA SATHWIKA</h1>
+                <div class="subtitle-container">
+                    <span class="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://github.com/ThotaSathwika" target="_blank" class="glow-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/thota-sathwika-9046b2297" target="_blank" class="glow-btn outline">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <!-- Floating Antigravity Elements -->
+            <div class="floating-element el-1"><i class="fas fa-code"></i></div>
+            <div class="floating-element el-2"><i class="fas fa-microchip"></i></div>
+            <div class="floating-element el-3"><i class="fas fa-satellite"></i></div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
 
-      <div class="buttons">
-        <a href="https://github.com/ThotaSathwika" target="_blank" class="btn">GitHub</a>
-        <a href="https://www.linkedin.com/in/thota-sathwika-9046b2297" target="_blank" class="btn secondary">LinkedIn</a>
-      </div>
-    </div>
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">About <span class="neon-text">Me</span></h2>
+            <div class="about-container glass-card">
+                <p class="about-text">
+                    I am a passionate 3rd-year B.Tech Computer Science Engineering student with strong interest in software development, AI-driven applications, frontend technologies, and creative problem solving. I continuously improve my technical skills through projects, coding practice, and immersive learning experiences.
+                </p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>B.Tech CSE</h3>
+                            <p>Currently in my 3rd year, exploring advanced concepts and building real-world projects.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Frontend Development</h3>
+                            <p>Crafting immersive web experiences using modern technologies and design principles.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Problem Solving</h3>
+                            <p>Continuously sharpening analytical skills with Data Structures and Algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="floating-card">
-      <div class="card">
-        <h2>🚀 Interactive Portfolio</h2>
-        <p>Modern UI • Animated Effects • Responsive Design</p>
-      </div>
-    </div>
-  </section>
-</header>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Technical <span class="neon-text">Skills</span></h2>
+            <div class="skills-grid">
+                <!-- Skill Cards will be styled with 3D tilt -->
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fa-brands fa-cuttlefish skill-icon"></i>
+                    <h3>C</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fa-brands fa-cuttlefish skill-icon" style="font-weight: 900;">++</i>
+                    <h3>C++</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fa-brands fa-python skill-icon"></i>
+                    <h3>Python</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fa-brands fa-java skill-icon"></i>
+                    <h3>Java</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                </div>
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fa-brands fa-html5 skill-icon"></i>
+                    <h3>HTML</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fa-brands fa-css3-alt skill-icon"></i>
+                    <h3>CSS</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fa-brands fa-js skill-icon"></i>
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-card glass-card tilt-card" data-tilt>
+                    <i class="fas fa-network-wired skill-icon"></i>
+                    <h3>DSA</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </section>
 
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    I am a dedicated and enthusiastic Computer Science Engineering student currently pursuing my 3rd year of B.Tech.
-    I enjoy exploring software development, web technologies, programming, and AI-driven innovations.
-    I am continuously improving my technical and problem-solving abilities through projects, coding practice,
-    and collaborative learning experiences.
-  </p>
-</section>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">My <span class="neon-text">Projects</span></h2>
+            <div id="github-projects-container" class="projects-grid">
+                <!-- Projects will be dynamically injected here via JS -->
+                <div class="loading-projects">
+                    <i class="fas fa-spinner fa-spin"></i> Fetching from GitHub...
+                </div>
+            </div>
+        </section>
 
-<section id="skills" class="section">
-  <h2>Skills</h2>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In <span class="neon-text">Touch</span></h2>
+            <div class="contact-container glass-card tilt-card" data-tilt>
+                <p>I'm currently looking for new opportunities and collaborations. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <div class="contact-links">
+                    <a href="mailto:thotasathwika@gmail.com" class="contact-link">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="https://github.com/ThotaSathwika" target="_blank" class="contact-link">
+                        <div class="icon-box"><i class="fab fa-github"></i></div>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thota-sathwika-9046b2297" target="_blank" class="contact-link">
+                        <div class="icon-box"><i class="fab fa-linkedin-in"></i></div>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <div class="skills-grid">
-    <div class="skill-card">C</div>
-    <div class="skill-card">C++</div>
-    <div class="skill-card">Python</div>
-    <div class="skill-card">Java</div>
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">DSA</div>
-  </div>
-</section>
+    <footer class="glass-footer">
+        <p>&copy; 2026 Thota Sathwika. Crafted with <span class="neon-text">Passion</span>.</p>
+    </footer>
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="project-grid">
-
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>
-        A responsive and interactive portfolio website built using HTML, CSS, and JavaScript.
-      </p>
-    </div>
-
-    <div class="project-card">
-      <h3>Programming & Development Projects</h3>
-      <p>
-        Explore coding projects, academic works, and technical repositories available on my GitHub profile.
-      </p>
-      <a href="https://github.com/ThotaSathwika" target="_blank">View GitHub Projects →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>AI & Web Development Learning</h3>
-      <p>
-        Continuously learning AI-driven software development, frontend design, and problem solving.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-
-  <div class="contact-container">
-    <a href="mailto:thotasathwika@example.com">📧 Email</a>
-    <a href="https://github.com/ThotaSathwika" target="_blank">💻 GitHub</a>
-    <a href="https://www.linkedin.com/in/thota-sathwika-9046b2297" target="_blank">🔗 LinkedIn</a>
-  </div>
-</section>
-
-<footer>
-  <p>©️ 2026 THOTA SATHWIKA | Designed with Creativity & Passion 💜</p>
-</footer>
-
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Vanilla Tilt for 3D hover effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
