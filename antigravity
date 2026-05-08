@@ -1,0 +1,144 @@
+Create a highly immersive, futuristic, and interactive personal portfolio website for:
+
+Name: THOTA SATHWIKA
+
+Professional Title:
+3rd Year B.Tech CSE Undergraduate | Aspiring Software Developer
+
+Theme:
+Futuristic dark neon UI with purple-blue gradients, antigravity-inspired animations, cinematic transitions, glassmorphism, and interactive particle systems.
+
+Website Goal:
+Build a premium modern portfolio experience that looks similar to award-winning AI startup landing pages and Lovable-style interactive websites.
+
+Design Requirements:
+- Fully responsive mobile-first design
+- Smooth scrolling animations
+- Interactive antigravity floating elements
+- Dynamic cursor glow effects
+- Glassmorphism cards
+- Animated particles in background
+- 3D hover interactions
+- Parallax scrolling sections
+- Neon lighting aesthetics
+- Animated navbar with active section highlighting
+- Cinematic loading screen
+- Soft blur glow transitions
+- Modern typography and spacing
+- Floating UI objects reacting to mouse movement
+
+Hero Section:
+- Large cinematic intro section
+- Name displayed:
+  THOTA SATHWIKA
+- Subtitle:
+  CSE Undergraduate | Aspiring Software Developer
+- Add animated typewriter effect
+- Include glowing CTA buttons:
+  GitHub
+  LinkedIn
+- Add floating antigravity cards around hero section
+- Add immersive background particles and motion effects
+
+About Me Section:
+Create an engaging animated section describing:
+“I am a passionate 3rd-year B.Tech Computer Science Engineering student with strong interest in software development, AI-driven applications, frontend technologies, and creative problem solving. I continuously improve my technical skills through projects, coding practice, and immersive learning experiences.”
+
+Add:
+- Animated timeline
+- Reveal-on-scroll effects
+- Floating information cards
+- Interactive section transitions
+
+Skills Section:
+Display these skills with glowing animated cards and hover interactions:
+- C
+- C++
+- Python
+- Java
+- HTML
+- CSS
+- JavaScript
+- DSA
+
+Add:
+- Neon progress indicators
+- Hover tilt animations
+- Floating particle interactions
+- Dynamic glow effects
+
+Projects Section:
+Integrate GitHub projects dynamically from:
+https://github.com/ThotaSathwika
+
+Create premium project cards with:
+- 3D hover effects
+- Animated overlays
+- Smooth transitions
+- Interactive GitHub buttons
+- Floating project previews
+
+
+
+Create premium futuristic project showcase cards with immersive hover animations, glowing overlays, floating effects, and interactive GitHub buttons.
+
+Include these projects:
+
+1. Space Facts
+Description:
+An interactive project focused on providing fascinating facts and information about space, planets, galaxies, and astronomy concepts using engaging UI and informative content.
+
+2. AI and Plagiarism: Detection & Ethical Usage
+Description:
+A project exploring AI-generated content detection, plagiarism identification techniques, and ethical considerations in responsible AI usage and academic integrity.
+
+3. AI-Assisted Virtual Training and Learning Environment
+Description:
+An AI-powered virtual learning and training platform concept designed to improve interactive education, personalized learning experiences, and smart digital training systems.
+
+Project Design Requirements:
+- 3D hover animations
+- Glassmorphism project cards
+- Animated reveal transitions
+- GitHub integration buttons
+- Neon glow effects
+- Floating motion effects
+- Interactive overlays on hover
+- Smooth cinematic animations
+
+Integrate GitHub profile dynamically:
+https://github.com/ThotaSathwika
+
+
+Contact Section:
+Include:
+- GitHub
+- LinkedIn
+- Email contact card
+
+LinkedIn:
+https://www.linkedin.com/in/thota-sathwika-9046b2297
+
+GitHub:
+https://github.com/ThotaSathwika
+
+Extra Features:
+- Custom animated cursor
+- Interactive particle engine
+- Mouse-follow glow effects
+- Scroll-based animations
+- Antigravity floating objects
+- Dynamic background gradients
+- Smooth page reveal transitions
+- Futuristic footer with glowing text
+
+Tech Stack:
+- HTML
+- CSS
+- JavaScript
+- GSAP animations
+- Three.js effects if needed
+- Modern frontend practices
+
+Final Result:
+The website should feel cinematic, futuristic, premium, highly immersive, interactive, and visually engaging similar to modern AI startup websites and Lovable-generated interfaces.
